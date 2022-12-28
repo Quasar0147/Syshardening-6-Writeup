@@ -58,7 +58,7 @@ Pwnkit is a known vulnerability that exploits memory corruption in the pkexec bi
 
 The website running on this server requires a password to access the administrator panel. What is the password to the administrator panel?
 
-ANSWER: m1n3cr4ft1ng\_3v3ry\_d4y
+ANSWER: m1n3cr4ft1ng_3v3ry_d4y
 ```
 So, to access the administration panel you can access the website or check the html file of the website. In the readme, it explains the website is serving files in /var/www/html/, now if we just check the index.html and scroll down to the login logic
 
@@ -98,7 +98,7 @@ A YouTube video was watched by an user of this device. What is the YouTube ID of
 
 Example: if the video link is "https://www.youtube.com/watch?v=dQw4w9WgXcQ", the answer is "dQw4w9WgXcQ", without quotes.
 
-ANSWER: FNBAmpm\_LbQ
+ANSWER: FNBAmpm_LbQ
 ```
 So if a user wants to watch a youtube video, what do they need? Well a browser, and there's only one browser on this machine, firefox. If you can check the history of that browser, you are able to find the youtube video and simply grab the ID from the link.
 
@@ -114,7 +114,7 @@ Now if we click on the video, we can get the full link
 
 SSH provides secure (if configured correctly) remote access across the network. SSH Configuration File is Owned by Root (4 pts)
 
-It is important that the SSH configuration file is not owned by any user other than root (in conjunction with setting secure permissions) in order to ensure that unauthorized users do not edit the configuration. You can simply run "chown root:root /etc/ssh/sshd\_config" to change the ownership of the file
+It is important that the SSH configuration file is not owned by any user other than root (in conjunction with setting secure permissions) in order to ensure that unauthorized users do not edit the configuration. You can simply run "chown root:root /etc/ssh/sshd_config" to change the ownership of the file
 
 #### SSH Root Login Disabled (4 pts)
 
@@ -122,13 +122,13 @@ Root, being the privileged user, should not be able to be accessed remotely from
 
 #### SSH Does Not Permit Empty Password (4 pts)
 
-If empty passwords are permitted, unauthorized users can logon easily. Because the README explains that password authentication should be enabled, this setting is applicable. To set this setting simply put "PermitEmptyPasswords no" in /etc/ssh/sshd\_config
+If empty passwords are permitted, unauthorized users can logon easily. Because the README explains that password authentication should be enabled, this setting is applicable. To set this setting simply put "PermitEmptyPasswords no" in /etc/ssh/sshd_config
 
 ![](img/4.png)
 
 #### SSH forces protocol 2 (4 pts)
 
-Protocol 2 is the most updated version of the SSH protocol. SSH Protocol 2 has several advantages over SSH version 1 such as more authentication methods and having sftp support. More authentication methods are useful for security. To set this setting put "Protocol 2" in /etc/ssh/sshd\_config
+Protocol 2 is the most updated version of the SSH protocol. SSH Protocol 2 has several advantages over SSH version 1 such as more authentication methods and having sftp support. More authentication methods are useful for security. To set this setting put "Protocol 2" in /etc/ssh/sshd_config
 
 ### Nginx
 
@@ -271,7 +271,7 @@ Maugrim is not authorized in the list of users provided by the README. Again, th
 
 Sysctl are parameters that modify how the kernel works. To modify sysctl settings, you can modify the files in /etc/sysctl.d/ and /etc/sysctl.conf itself. Before you paste in your own secure settings, you should check those files to see if anything was preconfigured.
 
-![](img/20.png)For example, you can find the setting kernel.randomize\_va\_space was added and the file "10-max49iscool.conf" was added
+![](img/20.png)For example, you can find the setting kernel.randomize_va_space was added and the file "10-max49iscool.conf" was added
 
 ![](img/21.png)
 
@@ -279,11 +279,11 @@ So without even configuring settings, you can already see things that could poss
 
 ### Userspace address space layout randomization enabled (3 pts)
 
-Address space layout randomization (ASLR) randomizes the position of processes in the memory. This can protect systems from many attacks such as buffer overflow or memory exploitations as they would first require prior knowledge of where things are located. You can enable ASLR protection in /etc/sysctl.conf with: kernel.randomize\_va\_space = 2. To apply the settings you can just run "sysctl -p"
+Address space layout randomization (ASLR) randomizes the position of processes in the memory. This can protect systems from many attacks such as buffer overflow or memory exploitations as they would first require prior knowledge of where things are located. You can enable ASLR protection in /etc/sysctl.conf with: kernel.randomize_va_space = 2. To apply the settings you can just run "sysctl -p"
 
 ### TCP SYN cookies enabled (4 pts)
 
-SYN flood attacks, a type of ddos attack, is where attackers can send a lot of SYN requests, filling the system's TCP connection table. Syncookies can verify whether or not the request is legitimate. To enable TCP SYN cookies, put net.ipv4.tcp\_syncookies = 1 in /etc/sysctl.conf. To apply the settings you can just run "sysctl -p"
+SYN flood attacks, a type of ddos attack, is where attackers can send a lot of SYN requests, filling the system's TCP connection table. Syncookies can verify whether or not the request is legitimate. To enable TCP SYN cookies, put net.ipv4.tcp_syncookies = 1 in /etc/sysctl.conf. To apply the settings you can just run "sysctl -p"
 
 ## Misc
 
@@ -291,7 +291,7 @@ SYN flood attacks, a type of ddos attack, is where attackers can send a lot of S
 
 If you try to login to the user or use sudo, and type in the wrong password, you will notice you can authenticate without a problem. This means that pam has been modified.
 
-In this case, if you read through the pam files you will find that the line that normally has the pam\_deny module has been replaced with the pam\_permit module
+In this case, if you read through the pam files you will find that the line that normally has the pam_deny module has been replaced with the pam_permit module
 
 ![](img/22.png)
 
