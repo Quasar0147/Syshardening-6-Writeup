@@ -138,7 +138,7 @@ Protocol 2 is the most updated version of the SSH protocol. SSH Protocol 2 has s
 
 #### NGINX Server Tokens Disabled (4 pts)
 
-Set ServerTokens off in /etc/nginx/nginx.conf. Server tokens leaks a substantial amount of information on the servers and can help attackers figure out what vulnerabilities the server may be vulnerable to based on the version.
+Set server_tokens off in /etc/nginx/nginx.conf (under http). Server tokens leaks a substantial amount of information on the servers and can help attackers figure out what vulnerabilities the server may be vulnerable to based on the version.
 
 #### NGINX Off-By-Slash Misconfiguration (4 pts)
 
