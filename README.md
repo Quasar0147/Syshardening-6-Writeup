@@ -32,7 +32,9 @@ Aslan is a lion, and therefore cannot be bothered with SSH keys. Please make sur
 - EXAMPLE ANSWER: 4242
 - -------------------------------------------------------- 
 
-What is the hostname of this device? ANSWER: narniacraft
+What is the hostname of this device? 
+
+ANSWER: narniacraft
 ```
 If you search up how to get the hostname on an ubuntu image, you can simply just type hostname in the terminal and you can get the answer
 
