@@ -321,6 +321,10 @@ If there is no man page, then we know that eth007 must've compiled the c code in
 
 ![](img/26.png)
 
+# Scoring report
+
+![](img/scoring_report_syshardening6.png)
+
 # Notable things/moments:
 
 ![](img/27.png)
