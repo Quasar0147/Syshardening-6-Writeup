@@ -329,6 +329,8 @@ If there is no man page, then we know that eth007 must've compiled the c code in
 
 ![](img/27.png)
 
+(note we did ask for a hint on the nginx off by slash cuz lol we spent like way to long on it (2 days iirc))
+
 ![](img/28.png)
 
 ![](img/29.png)
