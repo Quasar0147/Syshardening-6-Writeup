@@ -142,11 +142,11 @@ The NGINX configuration in nginx.conf has
 ```
 location /cdn {
 
-  limit\_except GET HEAD POST { deny all; } alias /srv/files/;
+  limit_except GET HEAD POST { deny all; } alias /srv/files/;
 
-  default\_type text/plain;
+  default_type text/plain;
 
-  limit\_req zone=one burst=5;
+  limit_req zone=one burst=5;
 
 }
 ```
